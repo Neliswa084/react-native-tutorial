@@ -1,12 +1,16 @@
-import { StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
+import RecentChats from '../components/RecentChats';
 
 export default function ChatsScreen() {
   return (
     <SafeAreaView style={styles.screen}>
-      <Header />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Header />
+        <RecentChats />
+      </ScrollView>
       <StatusBar style="dark" />
     </SafeAreaView>
   );
